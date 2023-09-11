@@ -9,7 +9,7 @@ struct WidgetTogglerApp: App {
   var body: some Scene {
     MenuBarExtra(
       "WidgetToggler",
-      systemImage: widgetsPrefs.hideWidgets ? "clipboard" : "clipboard.fill"
+      systemImage: widgetsPrefs.hideWidgets ? "rectangle.on.rectangle.slash" : "rectangle.inset.filled.on.rectangle"
     ) {
       Button(
         action: {
