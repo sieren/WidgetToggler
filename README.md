@@ -2,7 +2,7 @@
 
 WidgetToggler is a light-weight tray-bar application for macOS Sonoma that allows users to quickly hide all widgets, for example when screen-sharing.
 
-![alt text](https://raw.githubusercontent.com/sieren/widgettoggler/master/media/screenshot.png "WidgetToggler" )
+![alt text](https://raw.githubusercontent.com/sieren/widgettoggler/master/media/widgets_demo.gif "WidgetToggler" )
 
 ## Features
 - Individual toggles Widgets for Desktop and Stage Manager ✅
