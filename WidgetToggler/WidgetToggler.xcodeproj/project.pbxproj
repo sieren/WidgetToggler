@@ -13,6 +13,7 @@
 		69A3930A2AAE1A80007B9101 /* WidgetsPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A393092AAE1A80007B9101 /* WidgetsPrefs.swift */; };
 		69B7C75D2AAEFFD800804939 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7C75C2AAEFFD800804939 /* UserDefaults.swift */; };
 		69ED90242AAF752600137DA5 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 69ED90232AAF752600137DA5 /* LaunchAtLogin */; };
+		69ED90262AAF788A00137DA5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED90252AAF788A00137DA5 /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		69A393032AAE152C007B9101 /* WidgetToggler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetToggler.entitlements; sourceTree = "<group>"; };
 		69A393092AAE1A80007B9101 /* WidgetsPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsPrefs.swift; sourceTree = "<group>"; };
 		69B7C75C2AAEFFD800804939 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		69ED90252AAF788A00137DA5 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */,
+				69ED90252AAF788A00137DA5 /* Bundle.swift */,
 				69A393092AAE1A80007B9101 /* WidgetsPrefs.swift */,
 				69B7C75C2AAEFFD800804939 /* UserDefaults.swift */,
 				69A392FE2AAE152C007B9101 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B7C75D2AAEFFD800804939 /* UserDefaults.swift in Sources */,
+				69ED90262AAF788A00137DA5 /* Bundle.swift in Sources */,
 				69A3930A2AAE1A80007B9101 /* WidgetsPrefs.swift in Sources */,
 				69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */,
 			);

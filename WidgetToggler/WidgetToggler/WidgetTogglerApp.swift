@@ -31,7 +31,7 @@ struct WidgetTogglerApp: App {
           }
         },
         label: {
-          Text("Github")
+          Text("WidgetToggler " + (Bundle.main.releaseVersionNumber ?? ""))
         }
       )
       Button(
