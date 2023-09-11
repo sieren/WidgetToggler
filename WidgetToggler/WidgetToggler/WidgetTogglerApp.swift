@@ -2,6 +2,8 @@
 
 import SwiftUI
 
+import LaunchAtLogin
+
 @main
 struct WidgetTogglerApp: App {
   @State var widgetsPrefs = WidgetPreferences()
@@ -19,6 +21,8 @@ struct WidgetTogglerApp: App {
           Text(widgetsPrefs.hideWidgets ? "Show Widgets" : "Hide Widgets")
         }
       )
+      Divider()
+      LaunchAtLogin.Toggle()
       Divider()
       Button(
         action: {
