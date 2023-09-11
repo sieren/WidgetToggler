@@ -22,6 +22,16 @@ struct WidgetTogglerApp: App {
       Divider()
       Button(
         action: {
+          if let url = URL(string: "https://github.com/sieren/WidgetToggler") {
+            NSWorkspace.shared.open(url)
+          }
+        },
+        label: {
+          Text("Github")
+        }
+      )
+      Button(
+        action: {
           NSApplication.shared.terminate(nil)
         },
         label: {
