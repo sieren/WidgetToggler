@@ -6,13 +6,15 @@ import Observation
 import SwiftUI
 
 @Observable
-public final class WidgetPreferences {
+public final class WidgetPreferences : Sendable {
   public var hideWidgets: Bool = false
 
   @ObservationIgnored private var smActive: Bool = false
   @ObservationIgnored private var defaults: UserDefaults?
   var subscriptions = Set<AnyCancellable>()
   var smObserverTimer: Timer?
+
+  static let shared = WidgetPreferences()
 
   public init() {
     defaults = UserDefaults.init(suiteName: UserDefaults.kWindowManagerPlistKey)
@@ -55,5 +57,11 @@ public final class WidgetPreferences {
     } else {
       defaults.hideDesktopWidgets = !defaults.hideDesktopWidgets
     }
+  }
+
+  func showHideWidgets(hide: Bool) {
+    guard let defaults = defaults else { exit(0) }
+    defaults.hideStageManagerWidgets = hide
+    defaults.hideDesktopWidgets = hide
   }
 }
