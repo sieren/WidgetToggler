@@ -6,6 +6,7 @@ WidgetToggler is a light-weight tray-bar application for macOS Sonoma that allow
 
 ## Features
 - Individual toggles Widgets for Desktop and Stage Manager ✅
+- Toggle widgets via global shortcut ⌘⌃w ✅
 - Launch at Login ✅
 
 ## Requirements
@@ -16,6 +17,7 @@ WidgetToggler is a light-weight tray-bar application for macOS Sonoma that allow
 ## Installation
 
 Download WidgetToggler from [Releases](https://github.com/sieren/widgettoggler/releases), unzip and drag to Applications.
+
 
 ## License
 
