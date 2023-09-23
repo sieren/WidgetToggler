@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693C9CB32ABEE67200A2DB62 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 693C9CB22ABEE67200A2DB62 /* HotKey */; };
 		69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */; };
 		69A392FF2AAE152C007B9101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A392FE2AAE152C007B9101 /* Assets.xcassets */; };
 		69A393022AAE152C007B9101 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A393012AAE152C007B9101 /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693C9CB32ABEE67200A2DB62 /* HotKey in Frameworks */,
 				69ED90242AAF752600137DA5 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 			name = WidgetToggler;
 			packageProductDependencies = (
 				69ED90232AAF752600137DA5 /* LaunchAtLogin */,
+				693C9CB22ABEE67200A2DB62 /* HotKey */,
 			);
 			productName = WidgetToggler;
 			productReference = 69A392F72AAE152B007B9101 /* WidgetToggler.app */;
@@ -126,6 +129,7 @@
 			mainGroup = 69A392EE2AAE152B007B9101;
 			packageReferences = (
 				69ED90222AAF752600137DA5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */,
 			);
 			productRefGroup = 69A392F82AAE152B007B9101 /* Products */;
 			projectDirPath = "";
@@ -363,6 +367,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		69ED90222AAF752600137DA5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
@@ -374,6 +386,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		693C9CB22ABEE67200A2DB62 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
 		69ED90232AAF752600137DA5 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 69ED90222AAF752600137DA5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;

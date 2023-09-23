@@ -2,11 +2,20 @@
 
 import SwiftUI
 
+import HotKey
 import LaunchAtLogin
 
 @main
 struct WidgetTogglerApp: App {
   @State var widgetsPrefs = WidgetPreferences()
+  private let hotKey: HotKey
+
+  public init() {
+    hotKey = HotKey(keyCombo: KeyCombo(key: .w, modifiers: [.command, .control]))
+    hotKey.keyDownHandler = { [self] in
+      widgetsPrefs.toggleWidgets()
+    }
+  }
 
   var body: some Scene {
     MenuBarExtra(
@@ -20,7 +29,7 @@ struct WidgetTogglerApp: App {
         label: {
           Text(widgetsPrefs.hideWidgets ? "Show Widgets" : "Hide Widgets")
         }
-      )
+      ).keyboardShortcut(KeyEquivalent("w"), modifiers: [.control, .command])
       Divider()
       LaunchAtLogin.Toggle()
       Divider()
