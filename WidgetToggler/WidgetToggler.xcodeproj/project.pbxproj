@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		693C9CB32ABEE67200A2DB62 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 693C9CB22ABEE67200A2DB62 /* HotKey */; };
+		693C9D072ABEFDB400A2DB62 /* FocusFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */; };
 		69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */; };
 		69A392FF2AAE152C007B9101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A392FE2AAE152C007B9101 /* Assets.xcassets */; };
 		69A393022AAE152C007B9101 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A393012AAE152C007B9101 /* Preview Assets.xcassets */; };
@@ -17,7 +18,33 @@
 		69ED90262AAF788A00137DA5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED90252AAF788A00137DA5 /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		693C9CC92ABEECF800A2DB62 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		693C9CDC2ABEED0B00A2DB62 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusFilters.swift; sourceTree = "<group>"; };
+		693C9CBC2ABEECF800A2DB62 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		693C9D062ABEFCE400A2DB62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		69A392F72AAE152B007B9101 /* WidgetToggler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetToggler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTogglerApp.swift; sourceTree = "<group>"; };
 		69A392FE2AAE152C007B9101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,10 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693C9CBB2ABEECF800A2DB62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				693C9CBC2ABEECF800A2DB62 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		693C9CF02ABEF0C000A2DB62 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				69A393092AAE1A80007B9101 /* WidgetsPrefs.swift */,
+				69B7C75C2AAEFFD800804939 /* UserDefaults.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		69A392EE2AAE152B007B9101 = {
 			isa = PBXGroup;
 			children = (
 				69A392F92AAE152B007B9101 /* WidgetToggler */,
+				693C9CBB2ABEECF800A2DB62 /* Frameworks */,
 				69A392F82AAE152B007B9101 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,10 +105,11 @@
 		69A392F92AAE152B007B9101 /* WidgetToggler */ = {
 			isa = PBXGroup;
 			children = (
+				693C9D062ABEFCE400A2DB62 /* Info.plist */,
+				693C9CF02ABEF0C000A2DB62 /* Shared */,
 				69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */,
+				693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */,
 				69ED90252AAF788A00137DA5 /* Bundle.swift */,
-				69A393092AAE1A80007B9101 /* WidgetsPrefs.swift */,
-				69B7C75C2AAEFFD800804939 /* UserDefaults.swift */,
 				69A392FE2AAE152C007B9101 /* Assets.xcassets */,
 				69A393032AAE152C007B9101 /* WidgetToggler.entitlements */,
 				69A393002AAE152C007B9101 /* Preview Content */,
@@ -89,6 +135,8 @@
 				69A392F32AAE152B007B9101 /* Sources */,
 				69A392F42AAE152B007B9101 /* Frameworks */,
 				69A392F52AAE152B007B9101 /* Resources */,
+				693C9CC92ABEECF800A2DB62 /* Embed Foundation Extensions */,
+				693C9CDC2ABEED0B00A2DB62 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
@@ -160,6 +208,7 @@
 				69B7C75D2AAEFFD800804939 /* UserDefaults.swift in Sources */,
 				69ED90262AAF788A00137DA5 /* Bundle.swift in Sources */,
 				69A3930A2AAE1A80007B9101 /* WidgetsPrefs.swift in Sources */,
+				693C9D072ABEFDB400A2DB62 /* FocusFilters.swift in Sources */,
 				69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,17 +337,19 @@
 		69A393072AAE152C007B9101 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetToggler/WidgetToggler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetToggler/Preview Content\"";
 				DEVELOPMENT_TEAM = VEESE9857L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetToggler/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Widget Toggler";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -306,7 +357,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sieren.WidgetToggler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -317,17 +368,19 @@
 		69A393082AAE152C007B9101 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetToggler/WidgetToggler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetToggler/Preview Content\"";
 				DEVELOPMENT_TEAM = VEESE9857L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetToggler/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Widget Toggler";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -335,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sieren.WidgetToggler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

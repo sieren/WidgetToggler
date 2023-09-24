@@ -7,10 +7,11 @@ import LaunchAtLogin
 
 @main
 struct WidgetTogglerApp: App {
-  @State var widgetsPrefs = WidgetPreferences()
+  @State var widgetsPrefs: WidgetPreferences
   private let hotKey: HotKey
 
   public init() {
+    widgetsPrefs = WidgetPreferences.shared
     hotKey = HotKey(keyCombo: KeyCombo(key: .w, modifiers: [.command, .control]))
     hotKey.keyDownHandler = { [self] in
       widgetsPrefs.toggleWidgets()
