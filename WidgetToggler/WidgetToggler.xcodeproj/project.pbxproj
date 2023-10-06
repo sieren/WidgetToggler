@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		693C9CB32ABEE67200A2DB62 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 693C9CB22ABEE67200A2DB62 /* HotKey */; };
+		691985502ACFEE87007E88A9 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 6919854F2ACFEE87007E88A9 /* KeyboardShortcuts */; };
+		691985522ACFEEA5007E88A9 /* ShortcutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691985512ACFEEA5007E88A9 /* ShortcutHelpers.swift */; };
+		691985542ACFEF23007E88A9 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691985532ACFEF23007E88A9 /* SettingsScreen.swift */; };
 		693C9D072ABEFDB400A2DB62 /* FocusFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */; };
 		69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */; };
 		69A392FF2AAE152C007B9101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A392FE2AAE152C007B9101 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		691985512ACFEEA5007E88A9 /* ShortcutHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutHelpers.swift; sourceTree = "<group>"; };
+		691985532ACFEF23007E88A9 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusFilters.swift; sourceTree = "<group>"; };
 		693C9CBC2ABEECF800A2DB62 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		693C9D062ABEFCE400A2DB62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693C9CB32ABEE67200A2DB62 /* HotKey in Frameworks */,
 				69ED90242AAF752600137DA5 /* LaunchAtLogin in Frameworks */,
+				691985502ACFEE87007E88A9 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +112,8 @@
 				693C9D062ABEFCE400A2DB62 /* Info.plist */,
 				693C9CF02ABEF0C000A2DB62 /* Shared */,
 				69A392FA2AAE152B007B9101 /* WidgetTogglerApp.swift */,
+				691985532ACFEF23007E88A9 /* SettingsScreen.swift */,
+				691985512ACFEEA5007E88A9 /* ShortcutHelpers.swift */,
 				693C9CB42ABEEC3500A2DB62 /* FocusFilters.swift */,
 				69ED90252AAF788A00137DA5 /* Bundle.swift */,
 				69A392FE2AAE152C007B9101 /* Assets.xcassets */,
@@ -145,7 +151,7 @@
 			name = WidgetToggler;
 			packageProductDependencies = (
 				69ED90232AAF752600137DA5 /* LaunchAtLogin */,
-				693C9CB22ABEE67200A2DB62 /* HotKey */,
+				6919854F2ACFEE87007E88A9 /* KeyboardShortcuts */,
 			);
 			productName = WidgetToggler;
 			productReference = 69A392F72AAE152B007B9101 /* WidgetToggler.app */;
@@ -177,7 +183,7 @@
 			mainGroup = 69A392EE2AAE152B007B9101;
 			packageReferences = (
 				69ED90222AAF752600137DA5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
-				693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */,
+				6919854E2ACFEE87007E88A9 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = 69A392F82AAE152B007B9101 /* Products */;
 			projectDirPath = "";
@@ -206,10 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B7C75D2AAEFFD800804939 /* UserDefaults.swift in Sources */,
+				691985542ACFEF23007E88A9 /* SettingsScreen.swift in Sources */,
 				69ED90262AAF788A00137DA5 /* Bundle.swift in Sources */,
 				69A3930A2AAE1A80007B9101 /* WidgetsPrefs.swift in Sources */,
 				693C9D072ABEFDB400A2DB62 /* FocusFilters.swift in Sources */,
 				69A392FB2AAE152B007B9101 /* WidgetTogglerApp.swift in Sources */,
+				691985522ACFEEA5007E88A9 /* ShortcutHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +351,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetToggler/WidgetToggler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetToggler/Preview Content\"";
 				DEVELOPMENT_TEAM = VEESE9857L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -357,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sieren.WidgetToggler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -374,7 +382,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetToggler/WidgetToggler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WidgetToggler/Preview Content\"";
 				DEVELOPMENT_TEAM = VEESE9857L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -388,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sieren.WidgetToggler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -420,12 +428,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+		6919854E2ACFEE87007E88A9 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/soffes/HotKey.git";
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
 			};
 		};
 		69ED90222AAF752600137DA5 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
@@ -439,10 +447,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		693C9CB22ABEE67200A2DB62 /* HotKey */ = {
+		6919854F2ACFEE87007E88A9 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 693C9CB12ABEE67200A2DB62 /* XCRemoteSwiftPackageReference "HotKey" */;
-			productName = HotKey;
+			package = 6919854E2ACFEE87007E88A9 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
 		};
 		69ED90232AAF752600137DA5 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
